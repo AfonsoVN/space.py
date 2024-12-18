@@ -45,6 +45,7 @@ def draw():
 
 
 def update():
+
     pass
 
 def on_mouse_down(pos):
@@ -53,7 +54,7 @@ def on_mouse_down(pos):
     if next_satallite < number_of_satellite:
         if satellites[next_satallite]. collidepoint(pos):
             if next_satallite:
-                lines.append((satellites[next_satallite-1].pos, satellites[next_satallite.pos]))
+                lines.append((satellites[next_satallite-1].pos, satellites[next_satallite].pos))
             next_satallite = next_satallite + 1
         else:
             lines = []
@@ -62,5 +63,4 @@ def on_mouse_down(pos):
 create_satellites()
 
 pgzrun.go()
-
 
